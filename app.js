@@ -22,7 +22,7 @@ form.addEventListener("submit", async (event) => {
     const urlMatch = query.match(/\/item\/(m[0-9a-zA-Z]+)/);
     if (urlMatch) {
       const itemId = urlMatch[1];
-      response = await fetch(`http://127.0.0.1:8000/api/item?id=${encodeURIComponent(itemId)}`);
+      response = await fetch(`/api/item?id=${encodeURIComponent(itemId)}`);
       data = await response.json();
       if (!response.ok) {
         throw new Error(data.detail || "查询失败");
@@ -33,7 +33,7 @@ form.addEventListener("submit", async (event) => {
       return;
     }
 
-    response = await fetch(`http://127.0.0.1:8000/api/search?q=${encodeURIComponent(query)}`);
+    response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
     data = await response.json();
     if (!response.ok) {
       throw new Error(data.detail || "查询失败");
@@ -68,7 +68,7 @@ form.addEventListener("submit", async (event) => {
         if (!itemId) return;
 
         try {
-          const likeResp = await fetch('http://127.0.0.1:8000/api/like', {
+          const likeResp = await fetch('/api/like', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ item_id: itemId, item_url: itemUrl }),
