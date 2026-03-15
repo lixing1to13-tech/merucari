@@ -25,10 +25,6 @@ app.mount("/static", StaticFiles(directory="."), name="static")
 
 @app.get("/")
 async def root():
-    return {"status": "ok", "message": "Mercari API server is running"}
-
-@app.get("/app")
-async def app_page():
     return FileResponse("index.html")
 
 class OrderRequest(BaseModel):
