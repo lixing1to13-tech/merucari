@@ -1,0 +1,13 @@
+{
+  "name": "coal-order-web",
+  "version": "1.0.0",
+  "description": "煤炉快速下单 Web + 后端 示例",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>煤炉快速下单 Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>煤炉商品查询（Web）</h1>
+    <form id="searchForm">
+      <div class="field"><label for="query">搜索关键词</label><input id="query" name="query" type="text" placeholder="输入商品关键词" required /></div>
+      <button type="submit">查询</button>
+    </form>
+    <div id="status" class="status"></div>
+    <div id="result" class="result"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
